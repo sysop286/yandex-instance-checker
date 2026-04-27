@@ -1,0 +1,13 @@
+---
+services:
+
+  instance-monitor:
+    image: instance-monitor:latest
+    container_name: instance-monitor
+    environment:
+      TZ: ${TZ_}
+      OAUTH_TOKEN: "<YANDEX AUTH TOKEN>"
+      INSTANCE_ID: "<INSTANCE ID>"
+      TG_TOKEN: "<TELEGRAM TOKEN>"
+      TG_CHAT_ID: "TELEGRAM CHAT ID"
+    restart: unless-stopped
